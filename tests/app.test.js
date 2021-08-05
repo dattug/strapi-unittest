@@ -2,7 +2,7 @@ const fs = require('fs');
 const { setupStrapi } = require('./helpers/strapi');
 const { loadUsers } = require('./helpers/load_data');
 
-jest.setTimeout(30000)
+jest.setTimeout(60000)
 
 /** this code is called once before any test */
 beforeAll(async () => {
@@ -18,7 +18,6 @@ beforeAll(async () => {
 // });
 
 afterAll(async () => {
-  await strapi.destroy();
   await new Promise(resolve => setTimeout(() => resolve(), 10000));
 });
 

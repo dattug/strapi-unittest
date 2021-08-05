@@ -11,7 +11,7 @@ async function setupStrapi() {
   if (!instance) {
     /** the follwing code in copied from `./node_modules/strapi/lib/Strapi.js` */
     await Strapi().load();
-    console.log("STRAPI", strapi)
+    // console.log("STRAPI", strapi)
     instance = strapi; // strapi is global now
     // await instance.runBootstrapFunctions();
     // await instance.config.functions.bootstrap();
